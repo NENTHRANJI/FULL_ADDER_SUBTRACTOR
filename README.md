@@ -37,6 +37,15 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
+FULL ADDER
+
+![EXP 4](https://github.com/user-attachments/assets/b441d144-3b17-458b-85fa-438416d1f595)
+
+FULL SUBTRACTOR
+
+![SUB](https://github.com/user-attachments/assets/bc5b2660-e83b-4db0-86c7-2f3d31cb302e)
+
+
 
 **Procedure**
 
@@ -45,6 +54,24 @@ Write the detailed procedure here
 **Program:**
 
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
+FULL ADDER
+~~~
+module fa1_df(sum, cout, a, b, cin);
+    output sum;
+    output cout;
+    input a;
+    input b;
+    input cin;
+
+	 wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=a&b;
+	 assign w3=w1&cin;
+	 assign sum=w1^cin;
+	 assign cout=w2|w3;
+endmodule
+~~~
+FULL SUBTRACTOR
 ~~~
 module fullsub(df, bo, a, b, bin);
     output df;
@@ -65,10 +92,25 @@ Developed by:NENTHRANJI.S RegisterNumber:
 */212224040216
 
 **RTL Schematic**
+FULL  SUBTRACTOR
+
 ![experiment4](https://github.com/user-attachments/assets/14fa62ed-e60a-46c5-b4fb-f88b5486c579)
 
+FULL ADDER
+
+![SEM](https://github.com/user-attachments/assets/c4765a9b-3b6d-4c4f-a319-5ba4487aaa8f)
+
+
+
 **Output Timing Waveform**
+FULL SUBTRACTOR
+
 ![Screenshot (45)](https://github.com/user-attachments/assets/bfecfca5-e37d-4d64-801e-bbbd6e814f2a)
+
+FULL ADDER
+
+![ADD](https://github.com/user-attachments/assets/49961368-6efa-4003-a7a8-a6e6629dc623)
+
 
 **Result:**
 
